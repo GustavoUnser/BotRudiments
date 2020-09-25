@@ -3,12 +3,12 @@ require 'httparty'
 require 'byebug'
 require 'down'
 
-url = "https://www.drumeo.com/beat/rudiments/"	#passo a url da página numa variável
-
 def rudimentos	#declaro a função
 	puts "\e[H\e[2J"	#clear no terminal
 	print "Qual tipo de rudimento quer aprender hoje? (rulos, paradiddles, flams) "
 	tipo = gets.chomp	#capturo o tipo de rudimento o usuário quer aprender
+
+	url = "https://www.drumeo.com/beat/rudiments/"	#passo a url da página numa variável
 
 	if tipo == "rulos"	#adiciono o tipo de rudimento na url dependendo do input do usuário
 		url += "rolls/"	
@@ -38,7 +38,7 @@ def rudimentos	#declaro a função
 end
 
 
-rudiments()	#executa a função
+rudimentos()	#executa a função
 
 index_rand= rand($random.length-1)	#armazeno um index aleatório do array de exercícios $random
 
